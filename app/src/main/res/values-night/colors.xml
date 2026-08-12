@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="card_bg">#1C1C1E</color>
+    <color name="key_digit">#2C2C2E</color>
+    <color name="key_utility">#3A3A3C</color>
+    <color name="key_accent">#FF9F0A</color>
+    <color name="key_text_default">#FFFFFF</color>
+    <color name="key_text_accent">#FFFFFF</color>
+    <color name="text_secondary">#98989D</color>
+    <color name="ic_launcher_background">#007AFF</color>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Glucocalc</string>
+    <string name="mode_eag">Calculate eAG</string>
+    <string name="mode_a1c">Calculate HbA1c</string>
+    <string name="uk_label">UK (IFCC)</string>
+    <string name="help_label">Help</string>
+    <string name="invalid_input">Invalid input!</string>
+</resources>

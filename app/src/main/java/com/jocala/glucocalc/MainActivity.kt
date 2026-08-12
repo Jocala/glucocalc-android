@@ -3,6 +3,8 @@ package com.jocala.glucocalc
 import android.os.Bundle
 import android.text.util.Linkify
 import android.view.Gravity
+import android.view.Menu
+import android.view.MenuItem
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.ScrollView
@@ -49,9 +51,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        wireKeypad()
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.title = getString(R.string.app_name)
 
-        binding.helpButton.setOnClickListener { showHelp() }
+        wireKeypad()
 
         binding.modeGroup.addOnButtonCheckedListener { _, checkedId, isChecked ->
             if (isChecked) {
@@ -66,6 +69,21 @@ class MainActivity : AppCompatActivity() {
         }
 
         updateDisplay()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_help -> {
+                showHelp()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     private fun wireKeypad() {

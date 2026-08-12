@@ -26,6 +26,12 @@ adb -s 192.168.1.101:41833 shell am start -n com.jocala.glucocalc/.MainActivity
 
 Gradle wrapper is 8.7 (copied from kalireader). AGP 8.6.0, Kotlin 1.9.24, JDK 21.
 
+### Icons
+
+`icon/icon.png` is the source artwork (1024x1024, blue surround, no alpha).
+The launcher icons (mipmap PNGs + adaptive foreground) are downscaled from it
+with `sips`/PIL; regenerate them if the source changes.
+
 ---
 
 ## Behavior (matches the iOS app)

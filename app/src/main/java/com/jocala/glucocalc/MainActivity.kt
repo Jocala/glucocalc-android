@@ -114,11 +114,11 @@ class MainActivity : AppCompatActivity() {
             return
         }
         if (input.contains(".")) {
-            // Qt validator: max 2 decimal places
+            // max 2 decimal places
             val fraction = input.substringAfter('.', "").length
             if (fraction >= 2) return
         } else {
-            // Qt validator: max 999.99
+            // max 999.99
             if (input.length >= 3) return
         }
         input += d

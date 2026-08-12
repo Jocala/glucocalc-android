@@ -1,7 +1,7 @@
 package com.jocala.glucocalc
 
 /**
- * ADAG math, ported 1:1 from Calculator.swift / the Qt source.
+ * ADAG math, matching the SwiftUI app (Calculator.swift).
  * Do not "improve" the constants.
  */
 object GlucocalcMath {

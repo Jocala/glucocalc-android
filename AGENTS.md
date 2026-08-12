@@ -2,8 +2,8 @@
 
 ## Project Overview
 
-Kotlin/Android port of the Glucocalc calculator (Qt original at
-`/Volumes/disk3/source/glucocalc`; SwiftUI ports in `/Users/jeff/source/apple/glucocalc`).
+Kotlin/Android implementation of the Glucocalc calculator (SwiftUI counterpart
+in `/Users/jeff/source/apple/glucocalc`).
 Estimates HbA1c and average blood glucose using the 2008 ADAG formulas, plus
 glucose/HbA1c unit conversions.
 
@@ -28,7 +28,7 @@ Gradle wrapper is 8.7 (copied from kalireader). AGP 8.6.0, Kotlin 1.9.24, JDK 21
 
 ---
 
-## Behavior (ported 1:1 from the SwiftUI/Qt apps)
+## Behavior (matches the iOS app)
 
 - **Math** (`GlucocalcMath.kt`): `eAG = 28.7*A1c - 46.7` mg/dl (mmol/L = /18);
   `A1c = (eAG + 46.7)/28.7`; IFCC `= 10.93*A1c - 23.50`; NGSP `= 0.09148*IFCC + 2.152`.
@@ -51,6 +51,6 @@ Gradle wrapper is 8.7 (copied from kalireader). AGP 8.6.0, Kotlin 1.9.24, JDK 21
 ## Conventions
 
 - **Commits:** Do not commit unless explicitly directed
-- **Math:** Keep formulas exactly matching the Qt source; do not "improve" values
+- **Math:** Keep the 2008 ADAG formulas; do not "improve" values
 - **Project gen:** No xcodegen here — plain Gradle; wrapper 8.7 stays in sync
   with the other Android projects

@@ -3,7 +3,7 @@
     <color name="card_bg">#F2F2F7</color>
     <color name="key_digit">#E5E5EA</color>
     <color name="key_utility">#D6D6DB</color>
-    <color name="key_accent">#FF9F0A</color>
+    <color name="key_accent">#007AFF</color>
     <color name="key_text_default">#1C1C1E</color>
     <color name="key_text_accent">#FFFFFF</color>
     <color name="text_secondary">#6B6B70</color>

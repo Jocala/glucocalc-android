@@ -250,7 +250,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         column.addView(text("Glucocalc — Glucose/HbA1c Calculator", 18f, bold = true))
-        column.addView(text("Version 1.0", 14f))
+        column.addView(text("Version ${BuildConfig.VERSION_NAME}", 14f))
         column.addView(text("(c) 2018-2026 jocala", 14f))
 
         column.addView(TextView(this).apply {

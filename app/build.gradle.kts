@@ -5,19 +5,28 @@ plugins {
 
 android {
     namespace = "com.jocala.glucocalc"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.jocala.glucocalc"
         minSdk = 26
-        targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
-        ndk { abiFilters += "arm64-v8a" }
+        targetSdk = 36
+        versionCode = 3
+        versionName = "2.0"
+    }
+
+    signingConfigs {
+        create("release") {
+            storeFile = file("../keystore/glucocalc.jks")
+            storePassword = "glucocalc123"
+            keyAlias = "glucocalc"
+            keyPassword = "glucocalc123"
+        }
     }
 
     buildTypes {
         release {
+            signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),

@@ -234,7 +234,8 @@ class MainActivity : AppCompatActivity() {
             TextView(this).apply {
                 text = string
                 textSize = sizeSp
-                setTextColor(getColor(android.R.color.black))
+                // text color intentionally left as theme default (textColorPrimary):
+                // black in light mode, white in dark mode
                 if (bold) setTypeface(typeface, android.graphics.Typeface.BOLD)
                 if (spacingTop > 0) {
                     layoutParams = LinearLayout.LayoutParams(
@@ -249,17 +250,18 @@ class MainActivity : AppCompatActivity() {
             for (line in lines) column.addView(text(line, 14f))
         }
 
-        column.addView(text("Glucocalc — Glucose/HbA1c Calculator", 18f, bold = true))
+        column.addView(text("Jocala Glucocalc", 18f, bold = true))
+        column.addView(text("Glucose/HbA1c Calculator", 14f))
         column.addView(text("Version ${BuildConfig.VERSION_NAME}", 14f))
-        column.addView(text("(c) 2018-2026 jocala", 14f))
+        column.addView(text("(c) 2018-2026 Jocala Software", 14f))
 
         column.addView(TextView(this).apply {
             text = "jocala@jocala.com\nhttps://www.jocala.com"
             textSize = 14f
             autoLinkMask = Linkify.EMAIL_ADDRESSES or Linkify.WEB_URLS
             movementMethod = android.text.method.LinkMovementMethod.getInstance()
-            setTextColor(getColor(android.R.color.holo_blue_dark))
-            setPadding(0, 8, 0, 0)
+            // link color left as theme default (textColorLink): visible in both modes
+            setPadding(0, 16, 0, 0)
         })
 
         section(
@@ -305,7 +307,6 @@ class MainActivity : AppCompatActivity() {
         scroll.addView(column)
 
         AlertDialog.Builder(this)
-            .setTitle(R.string.help_label)
             .setView(scroll)
             .setPositiveButton("Done", null)
             .show()

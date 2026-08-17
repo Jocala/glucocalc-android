@@ -3,11 +3,11 @@
 ## Project Overview
 
 Kotlin/Android implementation of the Glucocalc calculator (SwiftUI counterpart
-in `/Users/jeff/source/apple/glucocalc`).
+in `/Users/jeff/source/glucocalc/glucocalc-apple`).
 Estimates HbA1c and average blood glucose using the 2008 ADAG formulas, plus
 glucose/HbA1c unit conversions.
 
-**Location:** `/Users/jeff/source/android/glucocalc`
+**Location:** `/Users/jeff/source/glucocalc/glucocalc-android`
 **Package/App ID:** `com.jocala.glucocalc`
 **Stack:** Kotlin + ViewBinding + XML (no Compose — matches sibling projects)
 **Min SDK:** 26 | **Target/Compile SDK:** 35 | **ABI:** arm64-v8a

@@ -18,9 +18,13 @@ android {
     signingConfigs {
         create("release") {
             storeFile = file("../keystore/glucocalc.jks")
-            storePassword = "REDACTED_CREDENTIAL"
+            // Passwords come from the environment, not the source tree. The
+            // literal that used to live here was committed and pushed to a
+            // public repository, so it is treated as compromised -- supply real
+            // credentials via keystore/env.txt (gitignored) or the shell env.
+            storePassword = System.getenv("KEYSTORE_PASSWORD") ?: ""
             keyAlias = "glucocalc"
-            keyPassword = "REDACTED_CREDENTIAL"
+            keyPassword = System.getenv("KEY_PASSWORD") ?: ""
         }
     }
 
